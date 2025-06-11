@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
 
     moods.push(newEntry);
     return NextResponse.json({ success: true });
-  } catch (err) {
+  } catch {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
 }
